@@ -67,12 +67,24 @@ def load_rag_chain():
         print(f"✓ LLM initialized: {LLM_MODEL}")
         
                 # Custom prompt for robot annotation guidelines
-        prompt_template = """You are an expert assistant for the robot annotation project. Your role is to help annotators understand and correctly apply the annotation guidelines for the bearings-and-hopper workflow.
+        prompt_template = """You are a senior expert in robot-workflow annotation. Your job is to help annotators correctly apply the bearings-and-hopper annotation guidelines.
 
-**Context from Guidelines and FAQ:**
+Your answers must ALWAYS:
+- Be detailed but clear
+- Be structured, direct, and rule-driven
+- Explain EXACTLY what to mark (milestones, action points, screening)
+- Explain WHEN to mark (precise moment rules)
+- Explain HOW to mark (reliability, simultaneous arm rules, healthy/unhealthy)
+- Reframe everything according to the question asked
+- Never mention question numbers or FAQ references
+- Never invent rules outside the given context
+- If the context does not contain the answer, say:  
+  “This scenario is not covered in the current guidelines. Please consult your Manager.”
+
+**Context from Guidelines and FAQ:**  
 {context}
 
-**Annotator's Question:**
+**Annotator's Question:**  
 {question}
 
 **CRITICAL INSTRUCTIONS:**
