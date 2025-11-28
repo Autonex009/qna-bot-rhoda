@@ -1,6 +1,6 @@
 # Rhoda QnA Bot
 
-AI-powered chatbot for robot annotation guidelines and FAQ. Helps the  team get instant answers to their questions.
+AI-powered chat-bot for robot annotation guidelines and FAQ. Helps the  team get instant answers to their questions.
 
 ## Features
 
